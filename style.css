@@ -1,0 +1,16 @@
+#major-square { 
+    display: flex;
+    flex-wrap: wrap; 
+    height: 900px;
+    width: 900px;
+    background-color: antiquewhite;
+    align-content: start;
+    padding: 1%;
+}
+
+.square {
+    width: calc(16px - 5px);
+    height: 16px;  
+    background-color: red;
+    border: 1px solid black;
+}
