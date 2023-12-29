@@ -1,11 +1,81 @@
+* {
+    background-color: lightblue;
+    margin: 0px;
+}
+.head {
+    font-family: cursive;
+    font-size: 60px;
+    font-weight: 100;
+    text-align: center;
+
+}
+
+.para {
+    font-family: cursive;
+    font-size: 30px;
+    text-align: center;
+    margin: ;
+}
+
+.GGrid {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.doubleButton {
+    display: flex;
+    justify-content: center;
+    margin: 10px 10px 10px 10px;
+}
+
+.generate {
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-family: Trattatello, fantasy ;
+    font-style: italic;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 15px 5px #48abe0;
+}
+
+.black {
+    display: block;
+    float: left;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-family: Trattatello, fantasy ;
+    font-style: italic;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.rainbow {
+    display: block;
+    float: right;
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-family: Trattatello, fantasy ;
+    font-style: italic;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
 #major-square { 
     display: flex;
     flex-wrap: wrap; 
-    height: 900px;
-    width: 900px;
+    height: 500px;
+    width: 500px;
     background-color: antiquewhite;
     align-content: start;
-    padding: 1%;
+    
 }
 
 .square {
@@ -13,4 +83,20 @@
     height: 16px;  
     background-color: red;
     border: 1px solid black;
+}
+
+.clearCase {
+    display: flex;
+    justify-content: center;
+    margin: 20px; 
+}
+
+.clearbtn {
+    padding: 10px;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+    cursor: pointer;
 }
