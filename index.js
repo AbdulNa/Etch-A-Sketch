@@ -1,41 +1,23 @@
 const gridside = 600;
-let rows_Column = 21;
+let rows_Column = 16; 
 
 const sketchArea = document.querySelector("#sketch-area");
 sketchArea.style.width = `${gridside}px`;
 sketchArea.style.height = `${gridside}px`;
 
-// funtion to change background when hovered/*
-function backgroundChange() { 
-    if (isMouseDown) { 
-        this.style.backgroundColor = "black";
-    }
-}
-function handleMouseDown() { 
-    isMouseDown = true;
-}
-function handleMouseup() { 
-    isMouseDown = false;
-}
 function backgroundChange() {
-    this.style.backgroundColor = "black";
+    this.style.backgroundColor = "Black";
 }
 
-//funtion  for eraser
 function eraser() {
-    if (isMouseDown) {
-        this.style.backgroundColor = "white";
-    }
-}
-function handleMouseDown() {
-    isMouseDown = true;
-}
-function handleMouseup() {
-    isMouseDown = false;
+    this.style.backgroundColor = "white";
 }
 
 function createCells() {
     const mini_square = (rows_Column * rows_Column);
+
+    sketchArea.innerHTML = "";
+
     //loops to create desired mini cubes    
     for(let i = 0; i < mini_square; i++) {
         const gridCell = document.createElement("div");
@@ -44,9 +26,20 @@ function createCells() {
         gridCell.classList.add("cell");
         sketchArea.appendChild(gridCell);
 
-        //gridCell.addEventListener("mousedown", handleMouseDown);        
-        //gridCell.addEventListener("mouseup", handleMouseup);        
         gridCell.addEventListener("mouseover", backgroundChange);
     }
 }
 createCells();
+
+
+function getUserInput() {
+    const userInput  = document.getElementById("userInput").value;
+
+    if (userInput > 1 && userInput < 100) {
+        rows_Column = userInput;
+        createCells();
+    } else {
+        alert("Input must be within range of 1 to 100");
+    }
+}
+

@@ -10,7 +10,7 @@ body {
 #sketch-area {
     display: flex;
     flex-wrap: wrap;
-    margin: 50px auto;
+    margin: 20px auto 30px;
     background-color: beige;
 }
 
@@ -20,19 +20,50 @@ body {
 }
 
 h1, h2 {
-    margin: 50px;
+    margin: 20px;
     text-align: center;
     font-family: cursive;
     font-size: 50px;
 }
 
 h2 {
-    margin: 20px;
+    margin: 15px;
     font-size: 30px;
 }
+/* upper buttons*/
+.btn_label {
+    text-align: center;
+    margin: 20px;
+}
 
-.fig {
-    display: flex;
-    justify-content: center;
-    margin-left: 10px;
+.lab {
+    margin: 0px 10px 0px 0px;
+}
+
+.gen {
+    padding: 10px 20px;
+    margin-top: 15px;
+    border: 1px solid #2f4a97; 
+    background-color: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    font-family: "montserrat";
+    cursor: pointer;
+}
+
+
+
+/*lower buttons*/
+.buttons {
+    text-align: center;
+}
+
+.btn {
+    border: 1px solid #2f4a97; 
+    background-color: none;
+    padding: 10px 20px;
+    margin: 0px 20px;
+    font-size: 15px;
+    font-family: "montserrat";
+    cursor: pointer;
 }

@@ -9,13 +9,24 @@
 <body>
     <h1>ETCH-A-SKETCH</h1>
     <h2>Unlock your Creativity</h2>
-
-    <div id="inputside" class="fig">
+ <!-- -->
+    <div id="inputside" class="btn_label">
+        <label class="lab" for="numericInput">ENTER A NUMBER FROM 1 to 100</label>
+        <input type="number" id="userInput" name="numericInput" min="0" max="100">
+        <br>
         <button class="gen" onclick="getUserInput()">GENERATE GRID</button>
-        <label for="numericInput">Enter a Number from 1 to 100</label>
-        <input type="number" id="numericInput" name="numericInput" min="0" max="100"></div>
-        <div id="sketch-area" class="container">
-        </div>
+    </div>
+        
+    <div id="sketch-area" class="container"> </div>
+
+    <div class="buttons">
+        <button class="btn clearPad" id="clear" onclick="getUserInput()">CLEAR</button>
+        <button class="btn Black" id="blk" onclick="black_color">BLACK</button>
+        <button class="btn rainbow" id=rbow onclick="rain_bow">RAINBOW</button>
+        <button class="btn eraser" id="erse" onclick="erase">ERASER</button>
+    </div>
+   
+
     <script src="./index.js"></script>
 </body>
 </html>
