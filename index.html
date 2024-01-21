@@ -20,10 +20,10 @@
     <div id="sketch-area" class="container"> </div>
 
     <div class="buttons">
-        <button class="btn clearPad" id="clear" onclick="getUserInput()">CLEAR</button>
-        <button class="btn Black" id="blk" onclick="black_color">BLACK</button>
-        <button class="btn rainbow" id=rbow onclick="rain_bow">RAINBOW</button>
-        <button class="btn eraser" id="erse" onclick="erase">ERASER</button>
+        <button class="btn clearPad" id="clear" onclick="clearGrid()">CLEAR</button>
+        <button class="btn Black" id="blk" onclick="changeColor('Black')">BLACK</button>
+        <button class="btn rainbow" id=rbow onclick="changeColor('random')">RAINBOW</button>
+        <button class="btn eraser" id="erse" onclick="changeColor('white')">ERASER</button>
     </div>
    
 

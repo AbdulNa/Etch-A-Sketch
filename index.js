@@ -1,18 +1,13 @@
 const gridside = 600;
 let rows_Column = 16; 
+let color = 'Black'
 
 const sketchArea = document.querySelector("#sketch-area");
 sketchArea.style.width = `${gridside}px`;
 sketchArea.style.height = `${gridside}px`;
 
-function backgroundChange() {
-    this.style.backgroundColor = "Black";
-}
 
-function eraser() {
-    this.style.backgroundColor = "white";
-}
-
+//function to create cells
 function createCells() {
     const mini_square = (rows_Column * rows_Column);
 
@@ -29,17 +24,43 @@ function createCells() {
         gridCell.addEventListener("mouseover", backgroundChange);
     }
 }
+//calls to draw default grid
 createCells();
 
-
+// user input funtion to generate desired grid size
 function getUserInput() {
     const userInput  = document.getElementById("userInput").value;
 
     if (userInput > 1 && userInput < 100) {
         rows_Column = userInput;
+        color = 'Black';
         createCells();
     } else {
         alert("Input must be within range of 1 to 100");
     }
 }
+
+
+function backgroundChange() {
+    if (color === 'random') {
+        this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+    } else {
+        this.style.backgroundColor = color;
+    }
+}
+
+function changeColor(choice) {
+    color = choice;
+}
+
+// clear grid function
+function clearGrid() {
+    const gridCell = document.querySelectorAll(".cell");
+    gridCell.forEach(cell => {
+        cell.style.backgroundColor = 'white';        
+    });
+}
+
+
+
 
