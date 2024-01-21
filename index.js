@@ -1,6 +1,7 @@
 const gridside = 600;
 let rows_Column = 16; 
 let color = 'Black'
+let isDrawing = false;
 
 const sketchArea = document.querySelector("#sketch-area");
 sketchArea.style.width = `${gridside}px`;
@@ -22,6 +23,8 @@ function createCells() {
         sketchArea.appendChild(gridCell);
 
         gridCell.addEventListener("mouseover", backgroundChange);
+        gridCell.addEventListener("mousedown", ()=> {isDrawing = true})
+        gridCell.addEventListener("mouseup", ()=> {isDrawing = false})
     }
 }
 //calls to draw default grid
@@ -42,10 +45,12 @@ function getUserInput() {
 
 
 function backgroundChange() {
+    if(isDrawing) {
     if (color === 'random') {
         this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
     } else {
         this.style.backgroundColor = color;
+    }
     }
 }
 
