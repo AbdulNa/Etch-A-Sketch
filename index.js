@@ -21,10 +21,10 @@ function createCells() {
         gridCell.style.height = `${(gridside / rows_Column)- 2}px`;
         gridCell.classList.add("cell");
         sketchArea.appendChild(gridCell);
-
+        const body = document.querySelector("body");
         gridCell.addEventListener("mouseover", backgroundChange);
-        gridCell.addEventListener("mousedown", ()=> {isDrawing = true})
-        gridCell.addEventListener("mouseup", ()=> {isDrawing = false})
+        body.addEventListener("mousedown", ()=> {isDrawing = true})
+        body.addEventListener("mouseup", ()=> {isDrawing = false})
     }
 }
 //calls to draw default grid
